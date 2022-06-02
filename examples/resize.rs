@@ -30,7 +30,6 @@ fn main() {
     let (w1, h1) = (decoder.get_width(), decoder.get_height());
     let dst_dims: Vec<_> = args[2].split("x").map(|s| s.parse().unwrap()).collect();
     let (w2, h2) = (dst_dims[0], dst_dims[1]);
-    // let mut resizer = resize::new(w1, h1, w2, h2, Gray8, Triangle);
     let mut dst = vec![0; w2 * h2];
 
     let mut outfh: Box<dyn io::Write> = if args[3] == "-" {
