@@ -9,6 +9,17 @@ readme = "README.md"
 homepage = "https://github.com/image-rs/y4m"
 repository = "https://github.com/image-rs/y4m.git"
 documentation = "https://docs.rs/y4m"
+edition = "2021"
 
 [dev-dependencies]
-resize = "0.4"
+resize = "0.7"
+
+
+[dependencies]
+fallible_collections = "0.4.0"
+rgb = "0.8.24"
+
+[profile.release]
+opt-level = 3
+debug = true
+
